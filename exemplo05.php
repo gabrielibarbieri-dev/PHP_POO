@@ -47,5 +47,9 @@ $jose = new Funcionario('José Salgado', 3000,300);
 echo "Funcionari@ $joao->nome é   $joao->tipoFuncionario e o valor do desconto é
 de R$ $joao->descontos <br>";
 
-echo "Funcionari@ $maria->nome  é $maria->tipoFuncionario e o valor do desconto é
+echo "Funcionari@ $maria->nome é   $maria->tipoFuncionario e o valor do desconto é
 de R$ $maria->descontos <br>";
+
+echo "Funcionari@ $jose->nome é   $jose->tipoFuncionario e o valor do desconto é
+de R$ $jose->descontos <br>";
+
