@@ -24,6 +24,11 @@ class Conta
         return $this->saldo;
     }
 
+    protected function setSaldo($novoSaldo)
+    {
+        this->saldo = $novoSaldo;
+    }
+
     // Métodos
     function creditar($valor)
     {
@@ -78,4 +83,4 @@ $poupanca = new Poupanca(2, 150, 0.10);
 $poupanca->creditar(50);
 $poupanca->debitar(100);
 $poupanca->atualizarJuros();
-echo "Saldo da Poupança $poupanca->numero: $poupanca->saldo <br>";
+echo "Saldo da Poupança {$poupanca->numero():} {$poupanca->saldo()} <br>";
