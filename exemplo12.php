@@ -1,4 +1,4 @@
-Maria Eduarda de Moura Rocha, 1 min
+Gabrieli Barbieri, 1 min
 <?php
 
     // Superclasse
