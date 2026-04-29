@@ -1,25 +1,35 @@
 <?php
 class Carro {
+    // 🚩 RISCO: Atributo público permite valores ilegais
     public $modelo;
     private $velocidade;
 
     public function __construct($modelo, $velocidade) {
         $this->modelo = $modelo;
-        $this->setVelocidade($velocidade); // usa o setter já com validação
+        $this->velocidade = $velocidade;
     }
 
-    // Getter
     public function getVelocidade() {
         return $this->velocidade;
     }
 
-    // Setter com validação
     public function setVelocidade($novaVelocidade) {
-        if ($novaVelocidade >= 0 && $novaVelocidade <= 200) {
+        if ($novaVelocidade >= 200) {
             $this->velocidade = $novaVelocidade;
+            echo "Você está acima da velocidade.<br>";
         } else {
-            echo "Velocidade inválida! Deve estar entre 0 e 200 km/h.<br>";
+            echo "Continue com esta velocidade.<br>";
         }
     }
 }
+
+// --- TESTE DO VEÍCULO ---
+$meuCarro = new Carro("Senai-Mobile", 0);
+
+// O desastre: alteração direta sem validação
+$meuCarro->setVelocidade(200); // Velocidade de foguete?
+$meuCarro->getVelocidade(0); // Carro andando no tempo?
+
+echo "Modelo: " . $meuCarro->modelo . "<br>";
+echo "Velocidade atual: " . $meuCarro->getVelocidade() . " km/h";
 ?>
